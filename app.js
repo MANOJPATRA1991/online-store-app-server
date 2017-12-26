@@ -31,6 +31,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var uploads = require('./routes/upload');
 var items = require('./routes/items');
+var groups = require('./routes/groups');
 
 mongoose.connect(config.mongoUrl);
 
@@ -104,6 +105,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/upload', uploads);
 app.use('/items', items);
+app.use('/groups', groups);
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
