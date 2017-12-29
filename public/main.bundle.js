@@ -459,7 +459,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".grid {\r\n    margin-top: 50px;\r\n    height: 100%;\r\n}\r\n\r\n.list {\r\n    margin: 10px auto;\r\n}\r\n\r\nimg {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n\r\nmat-sidenav {\r\n    width: 100vw;\r\n}\r\n\r\n.sidenav {\r\n    width: 100%;\r\n    height: 100%;\r\n    right: 0;\r\n    left: 0;\r\n    top: 50px;\r\n    z-index: 190;\r\n    position: absolute;\r\n}\r\n\r\nmat-sidenav {\r\n    left: 0;\r\n}\r\n", ""]);
+exports.push([module.i, ".grid {\r\n    margin-top: 50px;\r\n    height: 100%;\r\n}\r\n\r\n.list {\r\n    margin: 10px auto;\r\n}\r\n\r\nimg {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n\r\nmat-sidenav {\r\n    right: 0;\r\n    width: 100vw;\r\n}\r\n\r\n.sidenav {\r\n    width: 100%;\r\n    height: 100%;\r\n    right: 0;\r\n    left: 0;\r\n    top: 50px;\r\n    z-index: 190;\r\n    position: absolute;\r\n}\r\n\r\n#divTab {\r\n    margin: 10px;\r\n}", ""]);
 
 // exports
 
@@ -472,7 +472,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"sidenav\">\n    <mat-sidenav *ngIf=\"itemService.sidenav\" mode=\"side\" align=\"end\" opened class=\"mat-elevation-z6\">\n        <div>\n            <mat-tab-group (selectedTabChange)=\"getItems($event)\">\n                <mat-tab label=\"My Items\">\n                    <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n                </mat-tab>\n                <span *ngFor=\"let group of groups\">\n                    <mat-tab label=\"{{ group }}\">\n                        <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n                    </mat-tab>\n                </span>\n                <mat-tab *ngIf=\"auth.admin\" label=\"Need Approval\">\n                    <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n                </mat-tab>\n                <mat-tab *ngIf=\"auth.admin\" label=\"Incomplete\">\n                    <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n                </mat-tab>\n            </mat-tab-group>\n        </div>\n    </mat-sidenav>\n\n    <app-item-detail [model]=\"model\" (approveEvent)=\"approveItem($event)\"  (editEvent)=\"editItemForm(model)\"></app-item-detail>\n</mat-sidenav-container>\n"
+module.exports = "<mat-sidenav-container class=\"sidenav\">\n    <mat-sidenav class=\"side\" *ngIf=\"itemService.sidenav\" mode=\"side\" align=\"end\" opened class=\"mat-elevation-z6\">\n        <app-item-detail [model]=\"model\" (approveEvent)=\"approveItem($event)\"  (editEvent)=\"editItemForm(model)\"></app-item-detail>\n    </mat-sidenav>\n    <div id=\"divTab\">\n        <mat-tab-group (selectedTabChange)=\"getItems($event)\">\n            <mat-tab label=\"My Items\">\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n            </mat-tab>\n            <span *ngFor=\"let group of groups\">\n                <mat-tab label=\"{{ group }}\">\n                    <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n                </mat-tab>\n            </span>\n            <mat-tab *ngIf=\"auth.admin\" label=\"Need Approval\">\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n            </mat-tab>\n            <mat-tab *ngIf=\"auth.admin\" label=\"Incomplete\">\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n            </mat-tab>\n        </mat-tab-group>\n    </div>\n\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -610,7 +610,7 @@ var DashboardComponent = (function () {
         });
     };
     DashboardComponent.prototype.showDetails = function ($event) {
-        this.itemService.sidenav = false;
+        this.itemService.sidenav = true;
         this.model = $event;
     };
     DashboardComponent.prototype.editItemForm = function (item) {
@@ -859,7 +859,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#model {\r\n    width: 200px;\r\n    height: 200px;\r\n}\r\n\r\n\r\nbutton {\r\n    width: 100%;\r\n    margin-bottom: 3px;\r\n}\r\n#approved {\r\n    color: green;\r\n}\r\n\r\n#pending {\r\n    color: red;\r\n}\r\n\r\n#complete {\r\n    color: green;\r\n}\r\n\r\n#progress {\r\n    color: blue;\r\n}\r\n\r\n#star {\r\n    font-size: 30px !important;\r\n    color: gold;\r\n}\r\n\r\n#span-star {\r\n    font-size: 50px !important;\r\n}\r\n\r\n@media screen and (min-width: 768px) {\r\n    .model mat-card {\r\n        width: 600px;\r\n        margin: 0 auto;\r\n    }\r\n\r\n    #model {\r\n        margin-left: 200px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n    #model {\r\n        margin-left: 23.68%;\r\n    }\r\n}", ""]);
+exports.push([module.i, "#model {\r\n    width: 200px;\r\n    height: 200px;\r\n}\r\n\r\n\r\nbutton {\r\n    width: 100%;\r\n    margin-bottom: 3px;\r\n}\r\n#approved {\r\n    color: green;\r\n}\r\n\r\n#pending {\r\n    color: red;\r\n}\r\n\r\n#complete {\r\n    color: green;\r\n}\r\n\r\n#progress {\r\n    color: blue;\r\n}\r\n\r\n#star {\r\n    font-size: 30px !important;\r\n    color: gold;\r\n}\r\n\r\n#span-star {\r\n    font-size: 50px !important;\r\n}\r\n\r\n@media screen and (min-width: 768px) {\r\n    .model mat-card {\r\n        width: 600px;\r\n        margin: 0 auto;\r\n    }\r\n\r\n    #model {\r\n        margin-left: 200px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n    #model {\r\n        margin-left: 23.68%;\r\n        width: 200px;\r\n        height: 200px;\r\n        position: relative;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -1003,7 +1003,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".search {\r\n    width: 100%;\r\n}\r\n\r\n\r\nmat-form-field {\r\n    width: 100%;\r\n}\r\n\r\n.info, .delete {\r\n    position: absolute;\r\n    right: 0;\r\n}\r\n\r\n.expired {\r\n    background: rgba(249, 9, 9, 0.38) !important;\r\n}\r\n\r\nmat-grid-tile {\r\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\r\n    transition: all 0.3s cubic-bezier(.25,.8,.25,1);\r\n}\r\n\r\nmat-grid-tile:hover {\r\n    box-shadow: 0 10px 20px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);\r\n}\r\n\r\nmat-grid-list {\r\n    margin: 10px;\r\n}", ""]);
+exports.push([module.i, ".search {\r\n    width: 100%;\r\n}\r\n\r\n\r\nmat-form-field {\r\n    width: 100%;\r\n}\r\n\r\n.info, .delete {\r\n    position: absolute;\r\n    right: 0;\r\n}\r\n\r\n.expired {\r\n    background: rgba(249, 9, 9, 0.38) !important;\r\n}\r\n\r\nmat-grid-tile {\r\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\r\n    transition: all 0.3s cubic-bezier(.25,.8,.25,1);\r\n}\r\n\r\nmat-grid-tile:hover {\r\n    box-shadow: 0 10px 20px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);\r\n}\r\n", ""]);
 
 // exports
 
@@ -1781,7 +1781,7 @@ var ItemService = (function () {
         this.http = http;
         this.route = route;
         this.auth = auth;
-        this.sidenav = true;
+        this.sidenav = false;
         this.items = new __WEBPACK_IMPORTED_MODULE_7_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
         this.item = new __WEBPACK_IMPORTED_MODULE_7_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
     }
