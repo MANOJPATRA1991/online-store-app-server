@@ -7,7 +7,7 @@ var multer = require('multer');
 
 // Set The Storage Engine
 const storage = multer.diskStorage({
-  destination: '../osaserver/public/uploads',
+  destination: '../public/uploads',
   filename: function(req, file, cb){
     cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
   }
