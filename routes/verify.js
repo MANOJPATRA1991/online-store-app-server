@@ -4,6 +4,7 @@ var fs = require('fs');
 var cert = fs.readFileSync(__dirname+'/private.key'); //get private key
 var config = require('../config.js');
 
+// Get token
 exports.getToken = function(user){
     // sign with RSA SHA 256
     // returns the JSONWebToken as a string
@@ -13,6 +14,7 @@ exports.getToken = function(user){
     });
 };
 
+// Verify ordinary user
 exports.verifyOrdinaryUser = function(req, res, next){
     
     // check header or url parameters or post parameters for token
@@ -43,6 +45,7 @@ exports.verifyOrdinaryUser = function(req, res, next){
     }
 };
 
+// Verify admin user
 exports.verifyAdmin = function(req, res, next){
     // to access the decoded properties of the req object use req.decoded._doc
     if(!req.decoded){
