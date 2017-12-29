@@ -391,6 +391,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 var URL = 'https://item-store.herokuapp.com';
+// const URL = "http://localhost:3000";
 var CreateItemComponent = (function () {
     function CreateItemComponent(itemService, dialogRef, data) {
         this.itemService = itemService;
@@ -458,7 +459,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".grid {\r\n    margin-top: 50px;\r\n    height: 100%;\r\n}\r\n\r\n.list {\r\n    margin: 10px auto;\r\n}\r\n\r\nimg {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n\r\nmat-sidenav {\r\n    width: 100vw;\r\n}\r\n\r\n.sidenav {\r\n    width: 100%;\r\n    height: 100%;\r\n    right: 0;\r\n    top: 50px;\r\n    z-index: 190;\r\n    position: absolute;\r\n}\r\n\r\n\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".grid {\r\n    margin-top: 50px;\r\n    height: 100%;\r\n}\r\n\r\n.list {\r\n    margin: 10px auto;\r\n}\r\n\r\nimg {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n\r\nmat-sidenav {\r\n    width: 100vw;\r\n}\r\n\r\n.sidenav {\r\n    width: 100%;\r\n    height: 100%;\r\n    right: 0;\r\n    left: 0;\r\n    top: 50px;\r\n    z-index: 190;\r\n    position: absolute;\r\n}\r\n\r\nmat-sidenav {\r\n    left: 0;\r\n}\r\n", ""]);
 
 // exports
 
@@ -724,6 +725,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 var URL = 'https://item-store.herokuapp.com';
+// const URL = "http://localhost:3000";
 var EditItemComponent = (function () {
     function EditItemComponent(auth, itemService, dialogRef, groups, data) {
         this.auth = auth;
@@ -1704,6 +1706,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var baseURL = "https://item-store.herokuapp.com";
+// const baseURL = "http://localhost:3000";
 var GroupService = (function () {
     function GroupService(http, auth) {
         this.http = http;
@@ -1772,6 +1775,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var baseURL = "https://item-store.herokuapp.com";
+// const baseURL = "http://localhost:3000";
 var ItemService = (function () {
     function ItemService(http, route, auth) {
         this.http = http;
@@ -1887,6 +1891,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var baseURL = "https://item-store.herokuapp.com";
+// const baseURL = "http://localhost:3000";
 var MailService = (function () {
     function MailService(http, auth) {
         this.http = http;
@@ -1935,6 +1940,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var baseURL = "https://item-store.herokuapp.com";
+// const baseURL = "http://localhost:3000";
 var UserService = (function () {
     function UserService(http, route) {
         this.http = http;
