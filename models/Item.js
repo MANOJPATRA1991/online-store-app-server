@@ -24,12 +24,11 @@ var Item = new Schema({
         required: true
     },
     time_limit: {
-        type: Number,
+        type: Date,
         required: true
     },
     group: {
-        type: [String],
-        default: ['ALL']
+        type: [String]
     },
     approved: {
         type: Boolean,
