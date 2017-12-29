@@ -7,10 +7,14 @@ var Rating = require('../models/Rating');
 var Verify = require('./verify');
 
 var bodyParser = require('body-parser');
-var ObjectId = require('mongoose').Types.ObjectId; 
+var mongoose = require('mongoose');
+var fs = require('fs');
 
 // Create new item
 router.post('/create', Verify.verifyOrdinaryUser, (req, res, next) => {
+    if(!req.body.image) {
+        req.body.image = 'uploads/temp.jpg'
+    }
     let item = new Item({
         name: req.body.name,
         image: req.body.image,
@@ -22,20 +26,35 @@ router.post('/create', Verify.verifyOrdinaryUser, (req, res, next) => {
     Item.create(item, (err, result) => {
         if(err) {
             next(err);
+            res.status(500).json({
+                msg: 'Connection error'
+            });
         }
-        res.status(200).json({
-            msg: 'Item created',
-            id: result._id
-        });
+        res.status(200).json(result);
     });
 });
 
 // Get all items created by a user
-router.route('/createdBy/:uid')
+router.route('/createdBy')
 .get(Verify.verifyOrdinaryUser, (req, res, next) => {
     Item.find({ created_by: req.decoded._id }, (err, items) => {
         if (err) next(err);
         res.status(200).json(items);
+    });
+});
+
+// Remove an item
+router.delete('/remove/:itemId', Verify.verifyOrdinaryUser, Verify.verifyAdmin, (req, res, next) => {
+    Item.findByIdAndRemove(req.params.itemId, (err, item) => {
+        if (err) next(err);
+        if(item.image !== "uploads/temp.jpg") {
+            fs.unlink(`public/${item.image}`, (err) => {
+                if(err) {
+                    console.log(err);
+                }
+            });
+        }
+        res.json(item);
     });
 });
 
@@ -51,21 +70,31 @@ router.route('/groupedBy/:group')
 // Edit item details by item creator
 router.route('/edit/item/:itemId')
 .put(Verify.verifyOrdinaryUser, (req, res, next) => {
-    Item.findById(req.params.itemId, (err, item) => {
-        if (err) next(err);
-        if (item.created_by == req.decoded._id) {
-            item.name = req.body.name;
-            item.image = req.body.image;
-            item.description = req.body.description;
-            item.max_rating = req.body.max_rating;
-            item.time_limit = req.body.time_limit;
-        }
-        item.save((err, data) => {
+    Item.findOneAndUpdate(
+        {
+            _id: req.params.itemId,
+            created_by: req.decoded._id
+        }, 
+        {
+            $set: {
+              name: req.body.name, 
+              image: req.body.image,
+              description: req.body.description,
+              max_rating: req.body.max_rating,
+              time_limit: req.body.time_limit
+            }
+        },
+        {
+            upsert: false,
+            new: true
+        },
+        (err, item) => {
             if (err) next(err);
-            console.log(data);
-            res.status(200).json("Item updated");
-        })
-    });
+            console.log(item);
+            
+            res.status(200).json(item);    
+        }
+    );
 });
 
 // Rate an item
@@ -81,48 +110,38 @@ router.route('/rate/:itemId')
         if(err) {
             next(err);
         }
-        console.log(res_rating);
         Rating.aggregate(
-            [{
+            [{ 
+                $match : 
+                { 
+                    for_item: res_rating.for_item
+                } 
+            },
+            {
                 $group: {
-                    _id: req.params.itemId,
-                    average: {
-                        $avg: '$rating'
-                    },
-                    count: {
-                        $sum: 1
+                    _id: null,
+                    sum: {
+                        $sum: '$rating'
                     }
                 }
             }], (err, result) => {
             if (err) next(err);
-            
-            // Update item rating only if number of users who
-            // rated for the item is greater than 10
-            if (result[0].count > 10) {
-                // Update aggregated item rating
-                Item.findByIdAndUpdate(req.params.itemId, 
-                    {'rating': result[0].average}, 
-                    (err, data) => {
-                        if (err) {
-                            next(err);
-                            console.log(err);
-                        }
-                        res.status(200).json({
-                            msg: 'Rating updated'
-                        }
-                    );
-                });   
-            }
+            // Update aggregated item rating
+            Item.findByIdAndUpdate(req.params.itemId, 
+                {'rating': (result[0].sum*10)/15}, 
+                {new: true},
+                (err, data) => {
+                    if (err) {
+                        next(err);
+                    }
+                    console.log(data);
+                    res.status(200).json({
+                        msg: 'Rating updated',
+                        item: data
+                    }
+                );
+            }); 
         });
-    });
-});
-
-// Find all items for which user has voted
-router.route('/rated/:uid')
-.get(Verify.verifyOrdinaryUser, (req, res, next) => {
-    Rating.find({posted_by: req.params.uid}, (err, items) => {
-        if(err) next(err);
-        res.status(200).json(items);
     });
 });
 
@@ -131,35 +150,68 @@ router.route('/:itemId/approve')
 .put(Verify.verifyOrdinaryUser, Verify.verifyAdmin, (req, res, next) => {
     Item.findByIdAndUpdate(req.params.itemId, 
         {approved: true}, 
+        {new: true},
         (err, item) => {
             if(err) {
                 next(err);
             }
-            res.status(200).json({
-                msg: "Item approved"
-            }
-        );
+            console.log(item);
+            res.status(200).json(item);
     });
+});
+
+// Get all items pending
+router.route('/pending')
+.get(Verify.verifyOrdinaryUser, Verify.verifyAdmin, (req, res, next) => {
+    Item.find().where('approved').equals(false)
+    .exec((err, items) => {
+        if(err) next(err);
+        res.status(200).json(items);
+    })
+});
+
+// Get all incomplete items
+router.route('/incomplete')
+.get(Verify.verifyOrdinaryUser, Verify.verifyAdmin, (req, res, next) => {
+    Item.find().where('completed').equals(false)
+    .exec((err, items) => {
+        if(err) next(err);
+        res.status(200).json(items);
+    })
 });
 
 // Update item group - only available to admin
 router.route('/:itemId/updateGroup')
 .put(Verify.verifyOrdinaryUser, Verify.verifyAdmin, (req, res, next) => {
-    Item.findByIdAndUpdate(req.params.itemId, 
-        {
-            $push: {
-                group: req.body.newGroup
-            }
-        }, 
-        (err, item) => {
-            if(err) {
-                next(err);
-            }
-            res.status(200).json({
-                msg: "Item groups updated"
-            }
-        );
-    });
+    if(req.body.checked) {
+        Item.findByIdAndUpdate(req.params.itemId, 
+            {
+                $addToSet: {
+                    group: req.body.newGroup
+                }
+            },
+            {new: true}, 
+            (err, item) => {
+                if(err) {
+                    next(err);
+                }
+                res.status(200).json(item);
+        });
+    } else {
+        Item.findByIdAndUpdate(req.params.itemId, 
+            {
+                $pull: {
+                    group: req.body.newGroup
+                }
+            },
+            {new: true}, 
+            (err, item) => {
+                if(err) {
+                    next(err);
+                }
+                res.status(200).json(item);
+        });
+    }
 });
 
 module.exports = router;
