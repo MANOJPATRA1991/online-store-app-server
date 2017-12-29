@@ -630,7 +630,7 @@ var DashboardComponent = (function () {
             var user = '';
             _this.auth.getUser(value.created_by).subscribe(function (value) {
                 user = value.email;
-                var output = "\n        <h1>Notification from Online stores app</h1>\n        <p> This is to inform you that your item \n        " + _this.items[index].name.toUpperCase() + " \n        has been approved and now available for rating by users.</p>\n        <p>Thanks.</p>\n        <p>Online store app</p>\n        ";
+                var output = "\n        <h1>Notification from Online stores app</h1>\n        <p> This is to inform you that your item \n        " + _this.items[index].name.toUpperCase() + " \n        has been approved and now available for rating by users.\n        The item is available in groups " + _this.items[index].group.join(', ') + ".</p>\n        <p>Thanks.</p>\n        <p>Online store app</p>\n        ";
                 _this.mail.sendMail(output, [user]).subscribe(function (value) {
                     console.log(value);
                 });
@@ -1003,7 +1003,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".search {\r\n    width: 100%;\r\n}\r\n\r\n\r\nmat-form-field {\r\n    width: 100%;\r\n}\r\n\r\n.info, .delete {\r\n    position: absolute;\r\n    right: 0;\r\n}\r\n\r\n.expired {\r\n    background: rgba(249, 9, 9, 0.38) !important;\r\n}", ""]);
+exports.push([module.i, ".search {\r\n    width: 100%;\r\n}\r\n\r\n\r\nmat-form-field {\r\n    width: 100%;\r\n}\r\n\r\n.info, .delete {\r\n    position: absolute;\r\n    right: 0;\r\n}\r\n\r\n.expired {\r\n    background: rgba(249, 9, 9, 0.38) !important;\r\n}\r\n\r\nmat-grid-tile {\r\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\r\n    transition: all 0.3s cubic-bezier(.25,.8,.25,1);\r\n}\r\n\r\nmat-grid-tile:hover {\r\n    box-shadow: 0 10px 20px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);\r\n}\r\n\r\nmat-grid-list {\r\n    margin: 10px;\r\n}", ""]);
 
 // exports
 
@@ -1016,7 +1016,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/items-list/items-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-form-field class=\"search\">\n  <input matInput placeholder=\"Search by item name\" [(ngModel)]=\"searchText\">\n</mat-form-field>\n<mat-grid-list [cols]=\"cols\" rowHeight=\"250px\">\n  <mat-grid-tile *ngFor=\"let item of items | search : searchText\">\n      <mat-grid-tile-header class=\"expired\" *ngIf=\"checkExpiry(item) && auth.admin\">\n            <button mat-icon-button class=\"delete\" (click)=\"deleteItem(item._id)\">\n                <span matTooltip=\"Delete expired item\">\n                    <mat-icon>delete</mat-icon>\n                </span>\n            </button>\n      </mat-grid-tile-header>\n      <img mat-card-image src=\"http://localhost:3000/{{item.image}}\" alt=\"{{item.name}}\">\n      <mat-grid-tile-footer [ngClass]=\"{'expired': checkExpiry(item)}\">\n          <h3>{{item.name}}</h3>\n          <button class=\"info\" mat-icon-button (click)=\"showDetails(item)\">\n              <mat-icon>info</mat-icon>\n          </button>\n      </mat-grid-tile-footer>\n  </mat-grid-tile>\n</mat-grid-list>\n\n"
+module.exports = "<mat-form-field class=\"search\">\n  <input matInput placeholder=\"Search by item name\" [(ngModel)]=\"searchText\">\n</mat-form-field>\n<mat-grid-list [cols]=\"cols\" gutterSize=\"10\" rowHeight=\"250px\">\n  <mat-grid-tile *ngFor=\"let item of items | search : searchText\">\n      <mat-grid-tile-header class=\"expired\" *ngIf=\"checkExpiry(item) && auth.admin\">\n            <button mat-icon-button class=\"delete\" (click)=\"deleteItem(item._id)\">\n                <span matTooltip=\"Delete expired item\">\n                    <mat-icon>delete</mat-icon>\n                </span>\n            </button>\n      </mat-grid-tile-header>\n      <img mat-card-image src=\"http://localhost:3000/{{item.image}}\" alt=\"{{item.name}}\">\n      <mat-grid-tile-footer [ngClass]=\"{'expired': checkExpiry(item)}\">\n          <h3>{{item.name}}</h3>\n          <button class=\"info\" mat-icon-button (click)=\"showDetails(item)\">\n              <mat-icon>info</mat-icon>\n          </button>\n      </mat-grid-tile-footer>\n  </mat-grid-tile>\n</mat-grid-list>\n\n"
 
 /***/ }),
 
@@ -1073,7 +1073,7 @@ var ItemsListComponent = (function () {
             var item = value;
             _this.auth.getUser(value.created_by).subscribe(function (value) {
                 user = value.email;
-                var output = "\n        <h1>Notification from Online stores app</h1>\n        <p> This is to inform you that your item " + item.name.toUpperCase() + "\n        has been deleted from the database since it failed to achieve\n        the maximum rating with the time limit provided</p>\n        <p>Thanks.</p>\n        <p>Online store app</p>\n        ";
+                var output = "\n        <h1>Notification from Online stores app</h1>\n        <p> This is to inform you that your item " + item.name.toUpperCase() + "\n        has been deleted from the database since it failed to achieve\n        the maximum rating with the time limit provided.</p>\n        <p>Thanks.</p>\n        <p>Online store app</p>\n        ";
                 _this.mail.sendMail(output, [user]).subscribe(function (value) {
                     console.log(value);
                 });
