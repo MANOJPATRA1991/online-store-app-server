@@ -48,7 +48,7 @@ router.delete('/remove/:itemId', Verify.verifyOrdinaryUser, Verify.verifyAdmin, 
     Item.findByIdAndRemove(req.params.itemId, (err, item) => {
         if (err) next(err);
         if(item.image !== "uploads/temp.jpg") {
-            fs.unlink(`public/${item.image}`, (err) => {
+            fs.unlink(`${item.image}`, (err) => {
                 if(err) {
                     console.log(err);
                 }
