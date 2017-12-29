@@ -32,6 +32,7 @@ var users = require('./routes/users');
 var uploads = require('./routes/upload');
 var items = require('./routes/items');
 var groups = require('./routes/groups');
+var mail = require('./routes/mail');
 
 mongoose.connect(config.mongoUrl);
 
@@ -59,9 +60,6 @@ app.use(bodyParser.urlencoded({extended:true, limit:'50mb'}));
 
 app.use(cookieParser());
 
-// Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Express session
 app.use(session({
   secret: config.secretKey,
@@ -73,39 +71,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Express validator
-// app.use(expressValidator({
-//   errorFormatter: function(param, msg, value) {
-//     var namespace = param.split('.'),
-//         root = namespace.shift(),
-//         formParam = root;
-
-//     while(namespace.length) {
-//       formParam += '[' + namespace.shift() + ']';
-//     }
-//     return {
-//       param: formParam,
-//       msg: msg,
-//       value: value
-//     }
-//   }
-// }));
-
-// Connect flash
-// app.use(flash());
-
-// Global vars
-// app.use(function(req, res, next) {
-//   res.locals.success_msg = req.flash('success_msg');
-//   res.locals.error_msg = req.flash('error_msg');
-//   res.locals.error = req.flash('error');
-// });
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/upload', uploads);
 app.use('/items', items);
 app.use('/groups', groups);
+app.use('/mail', mail);
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
