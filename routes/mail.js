@@ -9,7 +9,7 @@ router.post('/send', (req, res) => {
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
         service: 'gmail',
-        auth: { user: 'patra.manoj0@gmail.com', pass: 'zwszdvovwxlxvukd' }
+        auth: { user: 'patra.manoj0@gmail.com', pass: '****************' }
     });
 
     // setup email data with unicode symbols
