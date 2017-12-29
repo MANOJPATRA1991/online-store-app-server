@@ -91,31 +91,33 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_file_upload__ = __webpack_require__("../../../../ng2-file-upload/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ng2_file_upload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__routing__ = __webpack_require__("../../../../../src/app/routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_user_signup_signup_component__ = __webpack_require__("../../../../../src/app/components/user/signup/signup.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_user_login_login_component__ = __webpack_require__("../../../../../src/app/components/user/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_nav_nav_component__ = __webpack_require__("../../../../../src/app/components/nav/nav.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_user_edit_user_edit_user_component__ = __webpack_require__("../../../../../src/app/components/user/edit-user/edit-user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_create_item_create_item_component__ = __webpack_require__("../../../../../src/app/components/create-item/create-item.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_item_service__ = __webpack_require__("../../../../../src/app/services/item.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_edit_item_edit_item_component__ = __webpack_require__("../../../../../src/app/components/edit-item/edit-item.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_group_service__ = __webpack_require__("../../../../../src/app/services/group.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_search_pipe__ = __webpack_require__("../../../../../src/app/pipes/search.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_items_list_items_list_component__ = __webpack_require__("../../../../../src/app/components/items-list/items-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_item_detail_item_detail_component__ = __webpack_require__("../../../../../src/app/components/item-detail/item-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_add_group_add_group_component__ = __webpack_require__("../../../../../src/app/components/add-group/add-group.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/components/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_angular_star_rating__ = __webpack_require__("../../../../angular-star-rating/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_mail_service__ = __webpack_require__("../../../../../src/app/services/mail.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__guards_activate_guard__ = __webpack_require__("../../../../../src/app/guards/activate.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__guards_deactivate_guard__ = __webpack_require__("../../../../../src/app/guards/deactivate.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_user_signup_signup_component__ = __webpack_require__("../../../../../src/app/components/user/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_user_login_login_component__ = __webpack_require__("../../../../../src/app/components/user/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_nav_nav_component__ = __webpack_require__("../../../../../src/app/components/nav/nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_user_edit_user_edit_user_component__ = __webpack_require__("../../../../../src/app/components/user/edit-user/edit-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_create_item_create_item_component__ = __webpack_require__("../../../../../src/app/components/create-item/create-item.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_item_service__ = __webpack_require__("../../../../../src/app/services/item.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_edit_item_edit_item_component__ = __webpack_require__("../../../../../src/app/components/edit-item/edit-item.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_group_service__ = __webpack_require__("../../../../../src/app/services/group.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pipes_search_pipe__ = __webpack_require__("../../../../../src/app/pipes/search.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_items_list_items_list_component__ = __webpack_require__("../../../../../src/app/components/items-list/items-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_item_detail_item_detail_component__ = __webpack_require__("../../../../../src/app/components/item-detail/item-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_add_group_add_group_component__ = __webpack_require__("../../../../../src/app/components/add-group/add-group.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/components/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_angular_star_rating__ = __webpack_require__("../../../../angular-star-rating/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_mail_service__ = __webpack_require__("../../../../../src/app/services/mail.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__guards_activate_guard__ = __webpack_require__("../../../../../src/app/guards/activate.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__guards_deactivate_guard__ = __webpack_require__("../../../../../src/app/guards/deactivate.guard.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -155,30 +157,30 @@ var AppModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__components_user_signup_signup_component__["a" /* SignupComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__components_user_login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__components_nav_nav_component__["a" /* NavComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__components_user_edit_user_edit_user_component__["a" /* EditUserComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_create_item_create_item_component__["a" /* CreateItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__components_user_signup_signup_component__["a" /* SignupComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__components_user_login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__components_nav_nav_component__["a" /* NavComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__components_user_edit_user_edit_user_component__["a" /* EditUserComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_create_item_create_item_component__["a" /* CreateItemComponent */],
                 __WEBPACK_IMPORTED_MODULE_10_ng2_file_upload__["FileSelectDirective"],
-                __WEBPACK_IMPORTED_MODULE_20__components_edit_item_edit_item_component__["a" /* EditItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__pipes_search_pipe__["a" /* SearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_23__components_items_list_items_list_component__["a" /* ItemsListComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__components_item_detail_item_detail_component__["a" /* ItemDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__components_add_group_add_group_component__["a" /* AddGroupComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__components_footer_footer_component__["a" /* FooterComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__components_edit_item_edit_item_component__["a" /* EditItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__pipes_search_pipe__["a" /* SearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_24__components_items_list_items_list_component__["a" /* ItemsListComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__components_item_detail_item_detail_component__["a" /* ItemDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__components_add_group_add_group_component__["a" /* AddGroupComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__components_footer_footer_component__["a" /* FooterComponent */]
             ],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_17__components_user_edit_user_edit_user_component__["a" /* EditUserComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_create_item_create_item_component__["a" /* CreateItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__components_edit_item_edit_item_component__["a" /* EditItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__components_add_group_add_group_component__["a" /* AddGroupComponent */]
+                __WEBPACK_IMPORTED_MODULE_18__components_user_edit_user_edit_user_component__["a" /* EditUserComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_create_item_create_item_component__["a" /* CreateItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_edit_item_edit_item_component__["a" /* EditItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__components_add_group_add_group_component__["a" /* AddGroupComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_11__routing__["a" /* routing */],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_27_angular_star_rating__["a" /* StarRatingModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_28_angular_star_rating__["a" /* StarRatingModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_flex_layout__["a" /* FlexLayoutModule */],
@@ -208,12 +210,13 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_8__angular_cdk_layout__["c" /* LayoutModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_16__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_item_service__["a" /* ItemService */],
-                __WEBPACK_IMPORTED_MODULE_21__services_group_service__["a" /* GroupService */],
-                __WEBPACK_IMPORTED_MODULE_28__services_mail_service__["a" /* MailService */],
-                __WEBPACK_IMPORTED_MODULE_29__guards_activate_guard__["a" /* ActivateGuard */],
-                __WEBPACK_IMPORTED_MODULE_30__guards_deactivate_guard__["a" /* DeactivateGuard */]
+                __WEBPACK_IMPORTED_MODULE_17__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_item_service__["a" /* ItemService */],
+                __WEBPACK_IMPORTED_MODULE_22__services_group_service__["a" /* GroupService */],
+                __WEBPACK_IMPORTED_MODULE_29__services_mail_service__["a" /* MailService */],
+                __WEBPACK_IMPORTED_MODULE_30__guards_activate_guard__["a" /* ActivateGuard */],
+                __WEBPACK_IMPORTED_MODULE_31__guards_deactivate_guard__["a" /* DeactivateGuard */],
+                { provide: __WEBPACK_IMPORTED_MODULE_12__angular_common__["LocationStrategy"], useClass: __WEBPACK_IMPORTED_MODULE_12__angular_common__["HashLocationStrategy"] }
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
         })
