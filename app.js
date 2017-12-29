@@ -47,6 +47,17 @@ passport.deserializeUser(User.deserializeUser());
 
 var app = express();
 
+// Secure traffic only
+app.all('*', function(req, res, next){
+  if (req.get('X-Forwarded-Proto')=='https' || req.hostname == 'localhost') {
+       //Serve Angular App by passing control to the next middleware
+       next();
+   } else if(req.get('X-Forwarded-Proto')!='https' && req.get('X-Forwarded-Port')!='443'){
+       //Redirect if not HTTP with original request URL
+       res.redirect('https://' + req.hostname + req.url);
+   }
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

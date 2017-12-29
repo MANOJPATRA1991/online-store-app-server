@@ -188,11 +188,12 @@ router.get('/getAll', Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(re
   User.aggregate(
     [{
       $group: {
-        _id: $email,
-        name: $username
+        _id: '$email'
       }
     }], (err, result) => {
       if(err) next(err);
+      console.log(err);
+      console.log(result);
       res.status(200).json(result);
     }
   );
