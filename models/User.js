@@ -25,7 +25,10 @@ var User = new Schema({
         type: Boolean,
         default: false
     },
-    groups: [String]
+    groups: {
+        type: [String],
+        default: ["ALL"]
+    }
 },
 {
    timestamps: true
