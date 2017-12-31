@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-nav></app-nav>\n<router-outlet></router-outlet>"
+module.exports = "<app-nav></app-nav>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -57,7 +57,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'app';
     }
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -106,18 +105,16 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_items_list_items_list_component__ = __webpack_require__("../../../../../src/app/components/items-list/items-list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_item_detail_item_detail_component__ = __webpack_require__("../../../../../src/app/components/item-detail/item-detail.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_add_group_add_group_component__ = __webpack_require__("../../../../../src/app/components/add-group/add-group.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/components/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_angular_star_rating__ = __webpack_require__("../../../../angular-star-rating/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_mail_service__ = __webpack_require__("../../../../../src/app/services/mail.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__guards_activate_guard__ = __webpack_require__("../../../../../src/app/guards/activate.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__guards_deactivate_guard__ = __webpack_require__("../../../../../src/app/guards/deactivate.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_angular_star_rating__ = __webpack_require__("../../../../angular-star-rating/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_mail_service__ = __webpack_require__("../../../../../src/app/services/mail.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__guards_activate_guard__ = __webpack_require__("../../../../../src/app/guards/activate.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__guards_deactivate_guard__ = __webpack_require__("../../../../../src/app/guards/deactivate.guard.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -168,8 +165,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_23__pipes_search_pipe__["a" /* SearchPipe */],
                 __WEBPACK_IMPORTED_MODULE_24__components_items_list_items_list_component__["a" /* ItemsListComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__components_item_detail_item_detail_component__["a" /* ItemDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__components_add_group_add_group_component__["a" /* AddGroupComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__components_footer_footer_component__["a" /* FooterComponent */]
+                __WEBPACK_IMPORTED_MODULE_26__components_add_group_add_group_component__["a" /* AddGroupComponent */]
             ],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_18__components_user_edit_user_edit_user_component__["a" /* EditUserComponent */],
@@ -180,7 +176,7 @@ var AppModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_11__routing__["a" /* routing */],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_28_angular_star_rating__["a" /* StarRatingModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_27_angular_star_rating__["a" /* StarRatingModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_flex_layout__["a" /* FlexLayoutModule */],
@@ -213,9 +209,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_17__services_user_service__["a" /* UserService */],
                 __WEBPACK_IMPORTED_MODULE_20__services_item_service__["a" /* ItemService */],
                 __WEBPACK_IMPORTED_MODULE_22__services_group_service__["a" /* GroupService */],
-                __WEBPACK_IMPORTED_MODULE_29__services_mail_service__["a" /* MailService */],
-                __WEBPACK_IMPORTED_MODULE_30__guards_activate_guard__["a" /* ActivateGuard */],
-                __WEBPACK_IMPORTED_MODULE_31__guards_deactivate_guard__["a" /* DeactivateGuard */],
+                __WEBPACK_IMPORTED_MODULE_28__services_mail_service__["a" /* MailService */],
+                __WEBPACK_IMPORTED_MODULE_29__guards_activate_guard__["a" /* ActivateGuard */],
+                __WEBPACK_IMPORTED_MODULE_30__guards_deactivate_guard__["a" /* DeactivateGuard */],
                 { provide: __WEBPACK_IMPORTED_MODULE_12__angular_common__["LocationStrategy"], useClass: __WEBPACK_IMPORTED_MODULE_12__angular_common__["HashLocationStrategy"] }
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
@@ -249,7 +245,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/add-group/add-group.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div mat-dialog-title>\n  Groups\n  <mat-tab-group>\n    <mat-tab label=\"Add new group\" *ngIf=\"auth.admin\">\n        <div mat-dialog-content>\n          <mat-form-field>\n            <input type=\"text\" matInput name=\"group\" id=\"group\" [(ngModel)]=\"group\" placeholder=\"Title\">\n          </mat-form-field>\n          <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\n          <button mat-raised-button (click)=\"addNewGroup()\" color=\"primary\" cdkFocusInitial> Add </button>\n        </div>\n    </mat-tab>\n    <mat-tab label=\"Subscribe to new group\">\n      <div mat-dialog-content>\n        <div *ngFor=\"let group of allGroups\">\n          <mat-checkbox [checked]=\"myGroups.includes(group)\" \n          (change)=\"change($event, group)\">\n            {{ group }}\n          </mat-checkbox>\n        </div>\n        <div>\n          <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\n          <button mat-raised-button (click)=\"onNoClick()\" color=\"primary\" cdkFocusInitial> Save </button>\n        </div>\n      </div>\n    </mat-tab>\n  </mat-tab-group>\n</div>"
+module.exports = "<div mat-dialog-title>\r\n  Groups\r\n  <mat-tab-group>\r\n    <mat-tab label=\"Add new group\" *ngIf=\"auth.admin\">\r\n        <div mat-dialog-content>\r\n          <mat-form-field>\r\n            <input type=\"text\" matInput name=\"group\" id=\"group\" [(ngModel)]=\"group\" placeholder=\"Title\">\r\n          </mat-form-field>\r\n          <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\r\n          <button mat-raised-button (click)=\"addNewGroup()\" color=\"primary\" cdkFocusInitial> Add </button>\r\n        </div>\r\n    </mat-tab>\r\n    <mat-tab label=\"Subscribe to new group\">\r\n      <div mat-dialog-content>\r\n        <div *ngFor=\"let group of allGroups\">\r\n          <mat-checkbox [checked]=\"myGroups.includes(group)\" \r\n          (change)=\"change($event, group)\">\r\n            {{ group }}\r\n          </mat-checkbox>\r\n        </div>\r\n        <div>\r\n          <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\r\n          <button mat-raised-button (click)=\"onNoClick()\" color=\"primary\" cdkFocusInitial> Save </button>\r\n        </div>\r\n      </div>\r\n    </mat-tab>\r\n  </mat-tab-group>\r\n</div>"
 
 /***/ }),
 
@@ -285,17 +281,25 @@ var AddGroupComponent = (function () {
     }
     AddGroupComponent.prototype.ngOnInit = function () {
         var _this = this;
+        // get all available groups
         this.groups.getAllGroups().subscribe(function (value) {
             _this.allGroups = value;
         });
+        // subscribe to user's groups
         this.auth.myGroups.subscribe(function (value) {
             _this.myGroups = value;
         });
         this.getMyGroups();
     };
+    /**
+     * Close the dialog
+     */
     AddGroupComponent.prototype.onNoClick = function () {
         this.dialogRef.close();
     };
+    /**
+     * Add a new group to the list of groups
+     */
     AddGroupComponent.prototype.addNewGroup = function () {
         var _this = this;
         this.groups.addNewGroup({ newGroup: this.group.toUpperCase() })
@@ -304,12 +308,20 @@ var AddGroupComponent = (function () {
             _this.onNoClick();
         });
     };
+    /**
+     * Get all groups the user has subscribed to
+     */
     AddGroupComponent.prototype.getMyGroups = function () {
         var _this = this;
         this.auth.getMyGroups().subscribe(function (value) {
             _this.myGroups = value;
         });
     };
+    /**
+     * Update user's groups
+     * @param event: Select event
+     * @param {string} group: Group to update
+     */
     AddGroupComponent.prototype.change = function (event, group) {
         var _this = this;
         this.auth.updateMyGroups({
@@ -358,7 +370,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/create-item/create-item.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form #createForm=\"ngForm\">\n  <div mat-dialog-title>\n    Create new item\n  </div>\n  <div mat-dialog-content>\n    <mat-form-field>\n      <input type=\"text\" required matInput name=\"title\" id=\"title\" [(ngModel)]=\"item.name\" placeholder=\"Title\">\n    </mat-form-field>\n    <mat-form-field>\n      <textarea matInput required name=\"description\" id=\"description\" [(ngModel)]=\"item.description\" \n      placeholder=\"Description\"></textarea>\n    </mat-form-field>\n    <mat-card-title>\n      Select rating\n    </mat-card-title>\n    <mat-slider min=\"1\" max=\"10\" thumbLabel tickInterval=\"1\" name=\"max_rating\" [(ngModel)]=\"item.max_rating\"></mat-slider>\n    <mat-card-content>\n      <mat-select placeholder=\"Multiplier\" name=\"multiplier\" [(ngModel)]=\"item.multiplier\">\n        <mat-option *ngFor=\"let num of range\" [value]=\"num\">\n          {{ num }}\n        </mat-option>\n      </mat-select>\n    </mat-card-content>\n    <mat-card-subtitle>\n      Max rating: {{ calculateRating() }}\n    </mat-card-subtitle>\n    <mat-form-field>\n      <input matInput required [matDatepicker]=\"picker\" placeholder=\"Choose a date\" name=\"time_limit\" [(ngModel)]=\"item.time_limit\">\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n      <mat-datepicker #picker></mat-datepicker>\n    </mat-form-field>\n    <input type=\"file\" name=\"photo\" ng2FileSelect [uploader]=\"uploader\" />\n    <!-- button to trigger the file upload when submitted -->\n    <button type=\"button\" mat-raised-button (click)=\"uploader.uploadAll()\" [disabled]=\"!uploader.getNotUploadedItems().length\">\n          Upload Image\n    </button>\n    <div id=\"action\">\n      <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\n      <button mat-raised-button (click)=\"createItem()\" color=\"primary\" cdkFocusInitial [disabled]=\"!createForm.valid\"> Create </button>\n    </div>\n  </div>\n</form>"
+module.exports = "<form #createForm=\"ngForm\">\r\n  <div mat-dialog-title>\r\n    Create new item\r\n  </div>\r\n  <div mat-dialog-content>\r\n    <mat-form-field>\r\n      <input type=\"text\" required matInput name=\"title\" id=\"title\" [(ngModel)]=\"item.name\" placeholder=\"Title\">\r\n    </mat-form-field>\r\n    <mat-form-field>\r\n      <textarea matInput required name=\"description\" id=\"description\" [(ngModel)]=\"item.description\" \r\n      placeholder=\"Description\"></textarea>\r\n    </mat-form-field>\r\n    <mat-card-title>\r\n      Select rating\r\n    </mat-card-title>\r\n    <mat-slider min=\"1\" max=\"10\" thumbLabel tickInterval=\"1\" name=\"max_rating\" [(ngModel)]=\"item.max_rating\"></mat-slider>\r\n    <mat-card-content>\r\n      <mat-select placeholder=\"Multiplier\" name=\"multiplier\" [(ngModel)]=\"item.multiplier\">\r\n        <mat-option *ngFor=\"let num of range\" [value]=\"num\">\r\n          {{ num }}\r\n        </mat-option>\r\n      </mat-select>\r\n    </mat-card-content>\r\n    <mat-card-subtitle>\r\n      Max rating: {{ calculateRating() }}\r\n    </mat-card-subtitle>\r\n    <mat-form-field>\r\n      <input matInput required [matDatepicker]=\"picker\" placeholder=\"Choose a date\" name=\"time_limit\" [(ngModel)]=\"item.time_limit\">\r\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n      <mat-datepicker #picker></mat-datepicker>\r\n    </mat-form-field>\r\n    <input type=\"file\" name=\"photo\" ng2FileSelect [uploader]=\"uploader\" />\r\n    <!-- button to trigger the file upload when submitted -->\r\n    <button type=\"button\" mat-raised-button (click)=\"uploader.uploadAll()\" [disabled]=\"!uploader.getNotUploadedItems().length\">\r\n          Upload Image\r\n    </button>\r\n    <div id=\"action\">\r\n      <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\r\n      <button mat-raised-button (click)=\"createItem()\" color=\"primary\" cdkFocusInitial [disabled]=\"!createForm.valid\"> Create </button>\r\n    </div>\r\n  </div>\r\n</form>"
 
 /***/ }),
 
@@ -390,8 +402,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
-var URL = 'https://item-store.herokuapp.com';
-// const URL = "http://localhost:3000";
+// const URL = 'https://item-store.herokuapp.com';
+var URL = "http://localhost:3000";
 var CreateItemComponent = (function () {
     function CreateItemComponent(itemService, dialogRef, data) {
         this.itemService = itemService;
@@ -414,9 +426,15 @@ var CreateItemComponent = (function () {
             _this.item.image = "" + JSON.parse(response).file;
         };
     };
+    /**
+     * Close the dialog
+     */
     CreateItemComponent.prototype.onNoClick = function () {
         this.dialogRef.close();
     };
+    /**
+     * Create a new item
+     */
     CreateItemComponent.prototype.createItem = function () {
         this.item.max_rating = this.calculateRating();
         this.itemService.createItem({
@@ -431,6 +449,9 @@ var CreateItemComponent = (function () {
         });
         this.onNoClick();
     };
+    /**
+     * Calculate item's ratings
+     */
     CreateItemComponent.prototype.calculateRating = function () {
         return (+this.item.max_rating) * (+this.item.multiplier);
     };
@@ -472,7 +493,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"sidenav\">\n    <mat-sidenav class=\"side\" *ngIf=\"itemService.sidenav\" mode=\"side\" align=\"end\" opened class=\"mat-elevation-z6\">\n        <app-item-detail [model]=\"model\" (approveEvent)=\"approveItem($event)\"  (editEvent)=\"editItemForm(model)\"></app-item-detail>\n    </mat-sidenav>\n    <div id=\"divTab\">\n        <mat-tab-group (selectedTabChange)=\"getItems($event)\">\n            <mat-tab label=\"My Items\">\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n            </mat-tab>\n            <span *ngFor=\"let group of groups\">\n                <mat-tab label=\"{{ group }}\">\n                    <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n                </mat-tab>\n            </span>\n            <mat-tab *ngIf=\"auth.admin\" label=\"Need Approval\">\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n            </mat-tab>\n            <mat-tab *ngIf=\"auth.admin\" label=\"Incomplete\">\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\n            </mat-tab>\n        </mat-tab-group>\n    </div>\n\n</mat-sidenav-container>\n"
+module.exports = "<mat-sidenav-container class=\"sidenav\">\r\n    <mat-sidenav class=\"side\" *ngIf=\"itemService.sidenav\" mode=\"side\" align=\"end\" opened class=\"mat-elevation-z6\">\r\n        <app-item-detail [model]=\"model\" (approveEvent)=\"approveItem($event)\"  (editEvent)=\"editItemForm(model)\"></app-item-detail>\r\n    </mat-sidenav>\r\n    <div id=\"divTab\">\r\n        <mat-tab-group (selectedTabChange)=\"getItems($event)\">\r\n            <mat-tab label=\"My Items\">\r\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\r\n            </mat-tab>\r\n            <span *ngFor=\"let group of groups\">\r\n                <mat-tab label=\"{{ group }}\">\r\n                    <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\r\n                </mat-tab>\r\n            </span>\r\n            <mat-tab *ngIf=\"auth.admin\" label=\"Need Approval\">\r\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\r\n            </mat-tab>\r\n            <mat-tab *ngIf=\"auth.admin\" label=\"Incomplete\">\r\n                <app-items-list [cols]=\"cols\" [items]=\"items\" (itemEvent)=\"showDetails($event)\"></app-items-list>\r\n            </mat-tab>\r\n        </mat-tab-group>\r\n    </div>\r\n\r\n</mat-sidenav-container>\r\n"
 
 /***/ }),
 
@@ -559,6 +580,9 @@ var DashboardComponent = (function () {
         this.getItemsCreatedByUser();
         this.getMyGroups();
     };
+    /**
+     * Get all items created by user
+     */
     DashboardComponent.prototype.getItemsCreatedByUser = function () {
         var _this = this;
         this.itemService.getItemsCreatedByUser()
@@ -566,12 +590,19 @@ var DashboardComponent = (function () {
             _this.items = value;
         });
     };
+    /**
+     * Get user's groups
+     */
     DashboardComponent.prototype.getMyGroups = function () {
         var _this = this;
         this.auth.getMyGroups().subscribe(function (value) {
             _this.groups = value;
         });
     };
+    /**
+     * Get items related to tab
+     * @param event: Tab change event
+     */
     DashboardComponent.prototype.getItems = function (event) {
         this.items = [];
         switch (event.tab.textLabel) {
@@ -588,6 +619,9 @@ var DashboardComponent = (function () {
                 this.getItemsByGroup(event.tab.textLabel);
         }
     };
+    /**
+     * Get all items pending approval
+     */
     DashboardComponent.prototype.getPendingItems = function () {
         var _this = this;
         this.itemService.getPendingItems()
@@ -595,6 +629,9 @@ var DashboardComponent = (function () {
             _this.items = value;
         });
     };
+    /**
+     * Get all incomplete items
+     */
     DashboardComponent.prototype.getIncompleteItems = function () {
         var _this = this;
         this.itemService.getIncompleteItems()
@@ -602,6 +639,10 @@ var DashboardComponent = (function () {
             _this.items = value;
         });
     };
+    /**
+     * Get all items by group
+     * @param {string} group: Group to which items belong to
+     */
     DashboardComponent.prototype.getItemsByGroup = function (group) {
         var _this = this;
         this.itemService.getItemsByGroup(group)
@@ -609,10 +650,18 @@ var DashboardComponent = (function () {
             _this.items = value;
         });
     };
+    /**
+     * Show details for the item
+     * @param $event
+     */
     DashboardComponent.prototype.showDetails = function ($event) {
         this.itemService.sidenav = true;
         this.model = $event;
     };
+    /**
+     * Edit item details
+     * @param item: Item
+     */
     DashboardComponent.prototype.editItemForm = function (item) {
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_6__edit_item_edit_item_component__["a" /* EditItemComponent */], {
             width: '500px',
@@ -621,6 +670,10 @@ var DashboardComponent = (function () {
         dialogRef.afterClosed().subscribe(function (result) {
         });
     };
+    /**
+     * Approve item by admin
+     * @param $event
+     */
     DashboardComponent.prototype.approveItem = function ($event) {
         var _this = this;
         this.itemService.approveItem($event).subscribe(function (value) {
@@ -688,7 +741,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/edit-item/edit-item.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div mat-dialog-title>\n  Edit item\n  <mat-tab-group>\n    <mat-tab label=\"Edit form\">\n      <form>\n        <div mat-dialog-content>\n          <mat-form-field *ngIf=\"data.created_by == auth._id || auth.admin\">\n            <input type=\"text\" matInput name=\"title\" id=\"title\" [(ngModel)]=\"item.name\" placeholder=\"Title\">\n          </mat-form-field>\n          <mat-form-field *ngIf=\"data.created_by == auth._id || auth.admin\">\n            <textarea matInput name=\"description\" id=\"description\" [(ngModel)]=\"item.description\" \n            placeholder=\"Description\"></textarea>\n          </mat-form-field>\n          <mat-card-title *ngIf=\"data.created_by == auth._id || auth.admin\">\n            Select rating\n          </mat-card-title>\n          <mat-slider *ngIf=\"data.created_by == auth._id || auth.admin\" disabled min=\"1\" max=\"10\" thumbLabel tickInterval=\"1\" name=\"max_rating\" [(ngModel)]=\"item.max_rating\"></mat-slider>\n          <mat-card-content *ngIf=\"data.created_by == auth._id\">\n            <mat-select disabled placeholder=\"Multiplier\" name=\"multiplier\" [(ngModel)]=\"item.multiplier\">\n              <mat-option *ngFor=\"let num of range\" [value]=\"num\">\n                {{ num }}\n              </mat-option>\n            </mat-select>\n          </mat-card-content>\n          <mat-card-subtitle *ngIf=\"data.created_by == auth._id || auth.admin\">\n            Max rating: {{ item.max_rating }}\n          </mat-card-subtitle>\n          <mat-form-field *ngIf=\"data.created_by == auth._id || auth.admin\">\n            <input matInput disabled [matDatepicker]=\"picker\" placeholder=\"Choose a date\" name=\"time_limit\" [(ngModel)]=\"item.time_limit\">\n            <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n            <mat-datepicker #picker></mat-datepicker>\n          </mat-form-field>\n          <input *ngIf=\"data.created_by == auth._id\" type=\"file\" name=\"photo\" ng2FileSelect [uploader]=\"uploader\" />\n          <!-- button to trigger the file upload when submitted -->\n          <button *ngIf=\"data.created_by == auth._id\" type=\"button\" mat-raised-button (click)=\"uploader.uploadAll()\" [disabled]=\"!uploader.getNotUploadedItems().length\">\n                Upload Image\n          </button>\n          <div id=\"action\" *ngIf=\"data.created_by == auth._id\">\n            <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\n            <button mat-raised-button (click)=\"editItem()\" color=\"primary\" cdkFocusInitial> Edit </button>\n          </div>\n        </div>\n      </form>\n    </mat-tab>\n    <mat-tab label=\"Update Group\" *ngIf=\"auth.admin\">\n      <div mat-dialog-content>\n        <div *ngFor=\"let group of groupsList\">\n          <mat-checkbox [checked]=\"data.group.includes(group)\" \n          (change)=\"change($event, group)\">\n            {{ group }}\n          </mat-checkbox>\n        </div>\n      </div>\n      <div id=\"action\">\n        <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\n        <button mat-raised-button (click)=\"onNoClick()\" color=\"primary\" cdkFocusInitial> Save </button>\n      </div>\n    </mat-tab>\n  </mat-tab-group>\n</div>\n\n"
+module.exports = "<div mat-dialog-title>\r\n  Edit item\r\n  <mat-tab-group>\r\n    <mat-tab label=\"Edit form\">\r\n      <form>\r\n        <div mat-dialog-content>\r\n          <mat-form-field *ngIf=\"data.created_by == auth._id || auth.admin\">\r\n            <input type=\"text\" matInput name=\"title\" id=\"title\" [(ngModel)]=\"item.name\" placeholder=\"Title\">\r\n          </mat-form-field>\r\n          <mat-form-field *ngIf=\"data.created_by == auth._id || auth.admin\">\r\n            <textarea matInput name=\"description\" id=\"description\" [(ngModel)]=\"item.description\" \r\n            placeholder=\"Description\"></textarea>\r\n          </mat-form-field>\r\n          <mat-card-title *ngIf=\"data.created_by == auth._id || auth.admin\">\r\n            Select rating\r\n          </mat-card-title>\r\n          <mat-slider *ngIf=\"data.created_by == auth._id || auth.admin\" disabled min=\"1\" max=\"10\" thumbLabel tickInterval=\"1\" name=\"max_rating\" [(ngModel)]=\"item.max_rating\"></mat-slider>\r\n          <mat-card-content *ngIf=\"data.created_by == auth._id\">\r\n            <mat-select disabled placeholder=\"Multiplier\" name=\"multiplier\" [(ngModel)]=\"item.multiplier\">\r\n              <mat-option *ngFor=\"let num of range\" [value]=\"num\">\r\n                {{ num }}\r\n              </mat-option>\r\n            </mat-select>\r\n          </mat-card-content>\r\n          <mat-card-subtitle *ngIf=\"data.created_by == auth._id || auth.admin\">\r\n            Max rating: {{ item.max_rating }}\r\n          </mat-card-subtitle>\r\n          <mat-form-field *ngIf=\"data.created_by == auth._id || auth.admin\">\r\n            <input matInput disabled [matDatepicker]=\"picker\" placeholder=\"Choose a date\" name=\"time_limit\" [(ngModel)]=\"item.time_limit\">\r\n            <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n            <mat-datepicker #picker></mat-datepicker>\r\n          </mat-form-field>\r\n          <input *ngIf=\"data.created_by == auth._id\" type=\"file\" name=\"photo\" ng2FileSelect [uploader]=\"uploader\" />\r\n          <!-- button to trigger the file upload when submitted -->\r\n          <button *ngIf=\"data.created_by == auth._id\" type=\"button\" mat-raised-button (click)=\"uploader.uploadAll()\" [disabled]=\"!uploader.getNotUploadedItems().length\">\r\n                Upload Image\r\n          </button>\r\n          <div id=\"action\" *ngIf=\"data.created_by == auth._id\">\r\n            <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\r\n            <button mat-raised-button (click)=\"editItem()\" color=\"primary\" cdkFocusInitial> Edit </button>\r\n          </div>\r\n        </div>\r\n      </form>\r\n    </mat-tab>\r\n    <mat-tab label=\"Update Group\" *ngIf=\"auth.admin\">\r\n      <div mat-dialog-content>\r\n        <div *ngFor=\"let group of groupsList\">\r\n          <mat-checkbox [checked]=\"data.group.includes(group)\" \r\n          (change)=\"change($event, group)\">\r\n            {{ group }}\r\n          </mat-checkbox>\r\n        </div>\r\n      </div>\r\n      <div id=\"action\">\r\n        <button mat-raised-button (click)=\"onNoClick()\" color=\"accent\"> Cancel </button>\r\n        <button mat-raised-button (click)=\"onNoClick()\" color=\"primary\" cdkFocusInitial> Save </button>\r\n      </div>\r\n    </mat-tab>\r\n  </mat-tab-group>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -724,8 +777,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
-var URL = 'https://item-store.herokuapp.com';
-// const URL = "http://localhost:3000";
+// const URL = 'https://item-store.herokuapp.com';
+var URL = "http://localhost:3000";
 var EditItemComponent = (function () {
     function EditItemComponent(auth, itemService, dialogRef, groups, data) {
         this.auth = auth;
@@ -751,19 +804,33 @@ var EditItemComponent = (function () {
         };
         this.getAllGroups();
     };
+    /**
+     * Close dialog
+     */
     EditItemComponent.prototype.onNoClick = function () {
         this.dialogRef.close();
     };
+    /**
+     * Edit item details
+     */
     EditItemComponent.prototype.editItem = function () {
         this.itemService.editItem(this.item);
         this.onNoClick();
     };
+    /**
+     * Get all available groups
+     */
     EditItemComponent.prototype.getAllGroups = function () {
         var _this = this;
         this.groups.getAllGroups().subscribe(function (value) {
             _this.groupsList = value;
         });
     };
+    /**
+     * Change event fired by select checkbox
+     * @param event
+     * @param group : Group to be added to item's groups
+     */
     EditItemComponent.prototype.change = function (event, group) {
         var _this = this;
         this.groups.updateItemGroup(this.data._id, { newGroup: group, checked: event.checked }).subscribe(function (value) {
@@ -790,67 +857,6 @@ var EditItemComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/footer/footer.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ":host {\r\n    position: absolute;\r\n    bottom: 0;\r\n    background: blue;\r\n    width: 100%;\r\n}", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/footer/footer.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"footer\">\n    <p>Online store</p>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/footer/footer.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var FooterComponent = (function () {
-    function FooterComponent() {
-    }
-    FooterComponent.prototype.ngOnInit = function () {
-    };
-    FooterComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-footer',
-            template: __webpack_require__("../../../../../src/app/components/footer/footer.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/footer/footer.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], FooterComponent);
-    return FooterComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "../../../../../src/app/components/item-detail/item-detail.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -859,7 +865,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#model {\r\n    width: 200px;\r\n    height: 200px;\r\n}\r\n\r\n\r\nbutton {\r\n    width: 100%;\r\n    margin-bottom: 3px;\r\n}\r\n#approved {\r\n    color: green;\r\n}\r\n\r\n#pending {\r\n    color: red;\r\n}\r\n\r\n#complete {\r\n    color: green;\r\n}\r\n\r\n#progress {\r\n    color: blue;\r\n}\r\n\r\n#star {\r\n    font-size: 30px !important;\r\n    color: gold;\r\n}\r\n\r\n#span-star {\r\n    font-size: 50px !important;\r\n}\r\n\r\n@media screen and (min-width: 768px) {\r\n    .model mat-card {\r\n        width: 600px;\r\n        margin: 0 auto;\r\n    }\r\n\r\n    #model {\r\n        margin-left: 200px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n    #model {\r\n        margin-left: 23.68%;\r\n        width: 200px;\r\n        height: 200px;\r\n        position: relative;\r\n    }\r\n}", ""]);
+exports.push([module.i, "#model {\r\n    width: 200px;\r\n    height: 200px;\r\n}\r\n\r\nbutton {\r\n    width: 100%;\r\n    margin-bottom: 3px;\r\n}\r\n#approved {\r\n    color: green;\r\n}\r\n\r\n#pending {\r\n    color: red;\r\n}\r\n\r\n#complete {\r\n    color: green;\r\n}\r\n\r\n#progress {\r\n    color: blue;\r\n}\r\n\r\n#star {\r\n    font-size: 30px !important;\r\n    color: gold;\r\n}\r\n\r\n#span-star {\r\n    font-size: 50px !important;\r\n}\r\n\r\n@media screen and (min-width: 768px) {\r\n    .model mat-card {\r\n        width: 600px;\r\n        margin: 0 auto;\r\n    }\r\n\r\n    #model {\r\n        margin-left: 200px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n    #model {\r\n        margin-left: 23.68%;\r\n        width: 200px;\r\n        height: 200px;\r\n        position: relative;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -872,7 +878,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/item-detail/item-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"model.name\" class=\"model\">\n  <mat-card>\n        <mat-card-title>{{ model.name }}</mat-card-title>\n        <mat-card-subtitle id=\"complete\" *ngIf=\"isComplete(model)\">\n            COMPLETED\n        </mat-card-subtitle>\n        <mat-card-subtitle id=\"progress\" *ngIf=\"!isComplete(model)\">\n            IN PROGRESS\n        </mat-card-subtitle>\n  </mat-card>\n  <mat-card>\n        <mat-card-content>\n            <mat-progress-bar\n                [color]=\"color\"\n                mode=\"determinate\"\n                [value]=\"model.rating\"\n                bufferValue=\"75\">\n            </mat-progress-bar>\n        </mat-card-content>\n  </mat-card>\n    <mat-card>\n        <img mat-card-image id=\"model\" src=\"http://localhost:3000/{{model.image}}\" alt=\"{{model.name}}\">\n        <mat-card-content>\n            <mat-card-title>Description</mat-card-title>\n            <mat-card-subtitle>{{ model.description }}</mat-card-subtitle>\n        </mat-card-content>\n        <mat-card-content>\n                <p *ngIf=\"model.approved\" id=\"approved\">Item approved</p>\n                <p *ngIf=\"!model.approved\" id=\"pending\">Pending Approval</p>\n                <p>\n                    <mat-icon id=\"star\">star</mat-icon>\n                    <span id=\"span-star\">{{ model.rating | number:'.1-2' }}</span>\n                </p>\n                <mat-card-title *ngIf=\"model.created_by !== auth._id\">\n                    Rate this item\n                </mat-card-title>\n                <mat-card-subtitle *ngIf=\"model.created_by !== auth._id && !model.approved\">\n                    You can rate this item once it is approved.\n                </mat-card-subtitle>\n                <star-rating-comp *ngIf=\"model.created_by !== auth._id && model.approved\"\n                [size]=\"'large'\"\n                [starType]=\"'svg'\"\n                [hoverEnabled]=\"true\"\n                (onClick)=\"onClick($event, model)\">                             \n                </star-rating-comp>\n        </mat-card-content>\n        <mat-card-content>\n            Expires on {{ model.time_limit | date: 'fullDate' }}\n        </mat-card-content>\n        <mat-card-actions>\n            <button mat-raised-button *ngIf=\"!model.approved && auth.admin\" (click)=\"approveItem(model._id)\">\n                <mat-icon>mode_edit</mat-icon> \n                <span>Approve Item</span>\n            </button>\n        </mat-card-actions>\n        <mat-card-actions>\n            <button mat-raised-button *ngIf=\"(model.created_by == auth._id) || auth.admin\" (click)=\"editItemForm()\">\n                <mat-icon>mode_edit</mat-icon> \n                <span>Edit</span>\n            </button>\n        </mat-card-actions>\n        <mat-card-actions>\n            <button mat-raised-button *ngIf=\"auth.admin && model.approved\" (click)=\"sendEmails(model)\">\n                <mat-icon>send</mat-icon> \n                <span>Email item details</span>\n            </button>\n        </mat-card-actions>\n    </mat-card>\n</div>"
+module.exports = "<div *ngIf=\"model.name\" class=\"model\">\r\n  <mat-card>\r\n        <mat-card-title>{{ model.name }}</mat-card-title>\r\n        <mat-card-subtitle id=\"complete\" *ngIf=\"isComplete(model)\">\r\n            COMPLETED\r\n        </mat-card-subtitle>\r\n        <mat-card-subtitle id=\"progress\" *ngIf=\"!isComplete(model)\">\r\n            IN PROGRESS\r\n        </mat-card-subtitle>\r\n  </mat-card>\r\n  <mat-card>\r\n        <mat-card-content>\r\n            <mat-progress-bar\r\n                [color]=\"color\"\r\n                mode=\"determinate\"\r\n                [value]=\"model.rating\"\r\n                bufferValue=\"75\">\r\n            </mat-progress-bar>\r\n        </mat-card-content>\r\n  </mat-card>\r\n    <mat-card>\r\n        <img mat-card-image id=\"model\" src=\"http://localhost:3000/{{model.image}}\" alt=\"{{model.name}}\">\r\n        <mat-card-content>\r\n            <mat-card-title>Description</mat-card-title>\r\n            <mat-card-subtitle>{{ model.description }}</mat-card-subtitle>\r\n        </mat-card-content>\r\n        <mat-card-content>\r\n                <p *ngIf=\"model.approved\" id=\"approved\">Item approved</p>\r\n                <p *ngIf=\"!model.approved\" id=\"pending\">Pending Approval</p>\r\n                <p>\r\n                    <mat-icon id=\"star\">star</mat-icon>\r\n                    <span id=\"span-star\">{{ model.rating | number:'.1-2' }}</span>\r\n                </p>\r\n                <mat-card-title *ngIf=\"model.created_by !== auth._id\">\r\n                    Rate this item\r\n                </mat-card-title>\r\n                <mat-card-subtitle *ngIf=\"model.created_by !== auth._id && !model.approved\">\r\n                    You can rate this item once it is approved.\r\n                </mat-card-subtitle>\r\n                <star-rating-comp *ngIf=\"model.created_by !== auth._id && model.approved\"\r\n                [size]=\"'large'\"\r\n                [starType]=\"'svg'\"\r\n                [hoverEnabled]=\"true\"\r\n                (onClick)=\"onClick($event, model)\">                             \r\n                </star-rating-comp>\r\n        </mat-card-content>\r\n        <mat-card-content>\r\n            Expires on {{ model.time_limit | date: 'fullDate' }}\r\n        </mat-card-content>\r\n        <mat-card-actions>\r\n            <button mat-raised-button *ngIf=\"!model.approved && auth.admin\" (click)=\"approveItem(model._id)\">\r\n                <mat-icon>mode_edit</mat-icon> \r\n                <span>Approve Item</span>\r\n            </button>\r\n        </mat-card-actions>\r\n        <mat-card-actions>\r\n            <button mat-raised-button *ngIf=\"(model.created_by == auth._id) || auth.admin\" (click)=\"editItemForm()\">\r\n                <mat-icon>mode_edit</mat-icon> \r\n                <span>Edit</span>\r\n            </button>\r\n        </mat-card-actions>\r\n        <mat-card-actions>\r\n            <button mat-raised-button *ngIf=\"auth.admin && model.approved\" (click)=\"sendEmails(model)\">\r\n                <mat-icon>send</mat-icon> \r\n                <span>Email item details</span>\r\n            </button>\r\n        </mat-card-actions>\r\n    </mat-card>\r\n</div>"
 
 /***/ }),
 
@@ -908,6 +914,9 @@ var ItemDetailComponent = (function () {
         this.users = [];
         this.approveEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.editEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /**
+         * Onclick event fired on user rating
+         */
         this.onClick = function ($event, model) {
             _this.onClickResult = $event;
             _this.itemService.rateItem(_this.onClickResult.rating, model._id)
@@ -922,6 +931,9 @@ var ItemDetailComponent = (function () {
     ItemDetailComponent.prototype.ngOnChanges = function () {
         this.changeColor();
     };
+    /**
+     * Change color of progress bar
+     */
     ItemDetailComponent.prototype.changeColor = function () {
         if (this.model.rating < 30) {
             this.color = "warn";
@@ -933,9 +945,17 @@ var ItemDetailComponent = (function () {
             this.color = "primary";
         }
     };
+    /**
+     * Approve item by admin
+     * @param itemId: Item's id
+     */
     ItemDetailComponent.prototype.approveItem = function (itemId) {
         this.approveEvent.emit(itemId);
     };
+    /**
+     * Check if item is complete
+     * @param model: Item
+     */
     ItemDetailComponent.prototype.isComplete = function (model) {
         var modelDate = new Date(model.time_limit);
         // If item has not expired
@@ -947,9 +967,16 @@ var ItemDetailComponent = (function () {
             return false;
         }
     };
+    /**
+     * Edit Item data
+     */
     ItemDetailComponent.prototype.editItemForm = function () {
         this.editEvent.emit(true);
     };
+    /**
+     * Send email to all users about the newly approve item
+     * @param model : Item
+     */
     ItemDetailComponent.prototype.sendEmails = function (model) {
         var _this = this;
         this.auth.getAllUsers().subscribe(function (value) {
@@ -1016,7 +1043,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/items-list/items-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-form-field class=\"search\">\n  <input matInput placeholder=\"Search by item name\" [(ngModel)]=\"searchText\">\n</mat-form-field>\n<mat-grid-list [cols]=\"cols\" gutterSize=\"10\" rowHeight=\"250px\">\n  <mat-grid-tile *ngFor=\"let item of items | search : searchText\">\n      <mat-grid-tile-header class=\"expired\" *ngIf=\"checkExpiry(item) && auth.admin\">\n            <button mat-icon-button class=\"delete\" (click)=\"deleteItem(item._id)\">\n                <span matTooltip=\"Delete expired item\">\n                    <mat-icon>delete</mat-icon>\n                </span>\n            </button>\n      </mat-grid-tile-header>\n      <img mat-card-image src=\"http://localhost:3000/{{item.image}}\" alt=\"{{item.name}}\">\n      <mat-grid-tile-footer [ngClass]=\"{'expired': checkExpiry(item)}\">\n          <h3>{{item.name}}</h3>\n          <button class=\"info\" mat-icon-button (click)=\"showDetails(item)\">\n              <mat-icon>info</mat-icon>\n          </button>\n      </mat-grid-tile-footer>\n  </mat-grid-tile>\n</mat-grid-list>\n\n"
+module.exports = "<mat-form-field class=\"search\">\r\n  <input matInput placeholder=\"Search by item name\" [(ngModel)]=\"searchText\">\r\n</mat-form-field>\r\n<mat-grid-list [cols]=\"cols\" gutterSize=\"10\" rowHeight=\"250px\">\r\n  <mat-grid-tile *ngFor=\"let item of items | search : searchText\">\r\n      <mat-grid-tile-header class=\"expired\" *ngIf=\"checkExpiry(item) && auth.admin\">\r\n            <button mat-icon-button class=\"delete\" (click)=\"deleteItem(item._id)\">\r\n                <span matTooltip=\"Delete expired item\">\r\n                    <mat-icon>delete</mat-icon>\r\n                </span>\r\n            </button>\r\n      </mat-grid-tile-header>\r\n      <img mat-card-image src=\"http://localhost:3000/{{item.image}}\" alt=\"{{item.name}}\">\r\n      <mat-grid-tile-footer [ngClass]=\"{'expired': checkExpiry(item)}\">\r\n          <h3>{{item.name}}</h3>\r\n          <button class=\"info\" mat-icon-button (click)=\"showDetails(item)\">\r\n              <mat-icon>info</mat-icon>\r\n          </button>\r\n      </mat-grid-tile-footer>\r\n  </mat-grid-tile>\r\n</mat-grid-list>\r\n\r\n"
 
 /***/ }),
 
@@ -1054,6 +1081,10 @@ var ItemsListComponent = (function () {
     };
     ItemsListComponent.prototype.ngOnChanges = function () {
     };
+    /**
+     * Checks the expiry of the item
+     * @param model : Item
+     */
     ItemsListComponent.prototype.checkExpiry = function (model) {
         var modelDate = new Date(model.time_limit);
         // If item has not expired
@@ -1065,6 +1096,10 @@ var ItemsListComponent = (function () {
             return false;
         }
     };
+    /**
+     * Delete item from the database
+     * @param itemId: The item id
+     */
     ItemsListComponent.prototype.deleteItem = function (itemId) {
         var _this = this;
         this.itemService.deleteItem(itemId)
@@ -1085,6 +1120,10 @@ var ItemsListComponent = (function () {
         this.items.splice(index, 1);
         this.itemService.items.next(this.items);
     };
+    /**
+     * Show item details
+     * @param item : Item
+     */
     ItemsListComponent.prototype.showDetails = function (item) {
         this.itemEvent.emit(item);
     };
@@ -1138,7 +1177,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/nav/nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"flex-container\" fxLayout=\"column\" fxLayoutAlign=\"start stretch\">\n  <mat-toolbar color=\"primary\" class=\"mat-elevation-z10\" id=\"nav\">\n    <mat-toolbar-row>\n      Online store\n      <button mat-icon-button id=\"menu\" *ngIf=\"!isLoggedIn\" [matMenuTriggerFor]=\"menu\">\n        Menu\n      </button>\n      <button mat-icon-button id=\"ico\" *ngIf=\"isLoggedIn\" (click)=\"toggleSidenav()\">\n        <i class=\"material-icons\">apps</i>\n      </button>\n      <button mat-icon-button id=\"profile\" *ngIf=\"isLoggedIn\" [matMenuTriggerFor]=\"profile\">\n        {{ name }}\n      </button>\n    </mat-toolbar-row>\n  </mat-toolbar>\n</section>\n\n<mat-menu #menu=\"matMenu\">\n  <button mat-menu-item *ngIf=\"!isLoggedIn\" routerLink=\"/signup\">\n    <mat-icon>perm_identity</mat-icon>\n    <span>Sign up</span>\n  </button>\n  <button mat-menu-item *ngIf=\"!isLoggedIn\" routerLink=\"/login\">\n    <mat-icon>lock_open</mat-icon>\n    <span>Log in</span>\n  </button>\n</mat-menu>\n\n<mat-menu #profile=\"matMenu\">\n  <button mat-menu-item (click)=\"editProfileDialog()\">\n    <mat-icon>mode_edit</mat-icon>\n    <span>Edit profile</span>\n  </button>\n  <button mat-menu-item (click)=\"createItemDialog()\">\n    <mat-icon>add</mat-icon>\n    <span>Add new item</span>\n  </button>\n  <button mat-menu-item (click)=\"addGroupDialog()\">\n    <mat-icon>add</mat-icon>\n    <span>Add Group</span>\n  </button>\n  <button mat-menu-item *ngIf=\"isLoggedIn\" (click)=\"logout()\">\n    <mat-icon>lock_outline</mat-icon>\n    <span>Log out</span>\n  </button>\n</mat-menu>\n"
+module.exports = "<section class=\"flex-container\" fxLayout=\"column\" fxLayoutAlign=\"start stretch\">\r\n  <mat-toolbar color=\"primary\" class=\"mat-elevation-z10\" id=\"nav\">\r\n    <mat-toolbar-row>\r\n      Online store\r\n      <button mat-icon-button id=\"menu\" *ngIf=\"!isLoggedIn\" [matMenuTriggerFor]=\"menu\">\r\n        Menu\r\n      </button>\r\n      <button mat-icon-button id=\"ico\" *ngIf=\"isLoggedIn\" (click)=\"toggleSidenav()\">\r\n        <i class=\"material-icons\">apps</i>\r\n      </button>\r\n      <button mat-icon-button id=\"profile\" *ngIf=\"isLoggedIn\" [matMenuTriggerFor]=\"profile\">\r\n        {{ name }}\r\n      </button>\r\n    </mat-toolbar-row>\r\n  </mat-toolbar>\r\n</section>\r\n\r\n<mat-menu #menu=\"matMenu\">\r\n  <button mat-menu-item *ngIf=\"!isLoggedIn\" routerLink=\"/signup\">\r\n    <mat-icon>perm_identity</mat-icon>\r\n    <span>Sign up</span>\r\n  </button>\r\n  <button mat-menu-item *ngIf=\"!isLoggedIn\" routerLink=\"/login\">\r\n    <mat-icon>lock_open</mat-icon>\r\n    <span>Log in</span>\r\n  </button>\r\n</mat-menu>\r\n\r\n<mat-menu #profile=\"matMenu\">\r\n  <button mat-menu-item (click)=\"editProfileDialog()\">\r\n    <mat-icon>mode_edit</mat-icon>\r\n    <span>Edit profile</span>\r\n  </button>\r\n  <button mat-menu-item (click)=\"createItemDialog()\">\r\n    <mat-icon>add</mat-icon>\r\n    <span>Add new item</span>\r\n  </button>\r\n  <button mat-menu-item (click)=\"addGroupDialog()\">\r\n    <mat-icon>add</mat-icon>\r\n    <span>Add Group</span>\r\n  </button>\r\n  <button mat-menu-item *ngIf=\"isLoggedIn\" (click)=\"logout()\">\r\n    <mat-icon>lock_outline</mat-icon>\r\n    <span>Log out</span>\r\n  </button>\r\n</mat-menu>\r\n"
 
 /***/ }),
 
@@ -1190,9 +1229,15 @@ var NavComponent = (function () {
             _this.isLoggedIn = value;
         });
     };
+    /**
+     * Logs out the user
+     */
     NavComponent.prototype.logout = function () {
         this.auth.logout();
     };
+    /**
+     * Open edit profile dialog
+     */
     NavComponent.prototype.editProfileDialog = function () {
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__user_edit_user_edit_user_component__["a" /* EditUserComponent */], {
             width: '500px',
@@ -1202,6 +1247,9 @@ var NavComponent = (function () {
             console.log('The dialog was closed');
         });
     };
+    /**
+     * Open create item dialog
+     */
     NavComponent.prototype.createItemDialog = function () {
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_4__create_item_create_item_component__["a" /* CreateItemComponent */], {
             width: '500px'
@@ -1210,6 +1258,9 @@ var NavComponent = (function () {
             console.log('The dialog was closed');
         });
     };
+    /**
+     * Open dialog to add new group
+     */
     NavComponent.prototype.addGroupDialog = function () {
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_7__add_group_add_group_component__["a" /* AddGroupComponent */], {
             width: '500px'
@@ -1218,10 +1269,11 @@ var NavComponent = (function () {
             console.log('The dialog was closed');
         });
     };
+    /**
+     * Toggle the sidenav
+     */
     NavComponent.prototype.toggleSidenav = function () {
         this.itemService.sidenav = !this.itemService.sidenav;
-    };
-    NavComponent.prototype.ngOnDestroy = function () {
     };
     NavComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1262,7 +1314,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/user/edit-user/edit-user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form>\n  <div mat-dialog-title>\n    Edit user\n  </div>\n  <div mat-dialog-content>\n    <mat-form-field>\n      <input matInput placeholder=\"First Name\" type=\"text\" \n      name=\"firstname\" [(ngModel)]=\"user.firstname\">\n    </mat-form-field>\n\n    <mat-form-field>\n      <input matInput placeholder=\"Last Name\" type=\"text\" \n      name=\"lastname\" [(ngModel)]=\"user.lastname\">\n    </mat-form-field>\n    <div>\n      <button mat-raised-button color=\"accent\"\n      (click)=\"onNoClick()\">Cancel</button>\n      <button mat-raised-button color=\"primary\"\n      (click)=\"edit()\" cdkFocusInitial>Edit</button>\n    </div>\n  </div>\n</form>"
+module.exports = "<form>\r\n  <div mat-dialog-title>\r\n    Edit user\r\n  </div>\r\n  <div mat-dialog-content>\r\n    <mat-form-field>\r\n      <input matInput placeholder=\"First Name\" type=\"text\" \r\n      name=\"firstname\" [(ngModel)]=\"user.firstname\">\r\n    </mat-form-field>\r\n\r\n    <mat-form-field>\r\n      <input matInput placeholder=\"Last Name\" type=\"text\" \r\n      name=\"lastname\" [(ngModel)]=\"user.lastname\">\r\n    </mat-form-field>\r\n    <div>\r\n      <button mat-raised-button color=\"accent\"\r\n      (click)=\"onNoClick()\">Cancel</button>\r\n      <button mat-raised-button color=\"primary\"\r\n      (click)=\"edit()\" cdkFocusInitial>Edit</button>\r\n    </div>\r\n  </div>\r\n</form>"
 
 /***/ }),
 
@@ -1302,9 +1354,15 @@ var EditUserComponent = (function () {
         this.user.firstname = this.data.name.split(' ')[0];
         this.user.lastname = this.data.name.split(' ')[1];
     };
+    /**
+     * Close dialog
+     */
     EditUserComponent.prototype.onNoClick = function () {
         this.dialogRef.close();
     };
+    /**
+     * Edit user profile
+     */
     EditUserComponent.prototype.edit = function () {
         this.auth.editProfile(this.user);
         this.onNoClick();
@@ -1347,7 +1405,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/user/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form #loginForm=\"ngForm\">\n  <mat-card class=\"login-card\">\n    <mat-card-title id=\"login\">Log in</mat-card-title>\n    <mat-card-content>\n      <p class=\"alertError\" *ngIf=\"error !== ''\">{{ error }}</p>\n      <mat-form-field>\n        <input matInput placeholder=\"Username\" type=\"text\" \n        name=\"username\" required [(ngModel)]=\"user.username\">\n      </mat-form-field>\n\n      <mat-form-field>\n        <input matInput placeholder=\"Password\" type=\"password\" \n        name=\"password\" required [(ngModel)]=\"user.password\">\n      </mat-form-field>\n    </mat-card-content>\n    \n    <button mat-raised-button color=\"primary\" [disabled]=\"!loginForm.valid\" (click)=\"logIn()\">Log in</button>\n    <button mat-raised-button color=\"accent\" routerLink=\"/signup\">Sign up Here</button>\n  </mat-card>\n\n</form>"
+module.exports = "<form #loginForm=\"ngForm\">\r\n  <mat-card class=\"login-card\">\r\n    <mat-card-title id=\"login\">Log in</mat-card-title>\r\n    <mat-card-content>\r\n      <p class=\"alertError\" *ngIf=\"error !== ''\">{{ error }}</p>\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Username\" type=\"text\" \r\n        name=\"username\" required [(ngModel)]=\"user.username\">\r\n      </mat-form-field>\r\n\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Password\" type=\"password\" \r\n        name=\"password\" required [(ngModel)]=\"user.password\">\r\n      </mat-form-field>\r\n    </mat-card-content>\r\n    \r\n    <button mat-raised-button color=\"primary\" [disabled]=\"!loginForm.valid\" (click)=\"logIn()\">Log in</button>\r\n    <button mat-raised-button color=\"accent\" routerLink=\"/signup\">Sign up Here</button>\r\n  </mat-card>\r\n\r\n</form>"
 
 /***/ }),
 
@@ -1379,6 +1437,9 @@ var LoginComponent = (function () {
     LoginComponent.prototype.ngOnInit = function () {
         this.user = new __WEBPACK_IMPORTED_MODULE_1__logic_User__["a" /* User */]();
     };
+    /**
+     * Log in user
+     */
     LoginComponent.prototype.logIn = function () {
         var _this = this;
         this.auth.message.subscribe(function (value) { return _this.error = value; }, function (error) { return _this.error = error; });
@@ -1420,7 +1481,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/user/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form #signupForm=\"ngForm\">\n  <mat-card class=\"signup-card\">\n    <mat-card-title id=\"signup\">Sign up</mat-card-title>\n    <mat-card-content>\n      <p class=\"alertError\" *ngIf=\"error !== ''\">{{ error }}</p>\n      <mat-form-field>\n        <input matInput placeholder=\"Username\" type=\"text\" \n        name=\"username\" [(ngModel)]=\"user.username\" required>\n      </mat-form-field>\n    \n      <mat-form-field>\n        <input matInput placeholder=\"Email\" type=\"email\" \n        name=\"email\" [(ngModel)]=\"user.email\" required> \n      </mat-form-field>\n\n      <mat-form-field>\n        <input matInput placeholder=\"First Name\" type=\"text\" \n        name=\"firstname\" [(ngModel)]=\"user.firstname\">\n      </mat-form-field>\n\n      <mat-form-field>\n        <input matInput placeholder=\"Last Name\" type=\"text\" \n        name=\"lastname\" [(ngModel)]=\"user.lastname\">\n      </mat-form-field>\n\n      <mat-form-field>\n        <input matInput placeholder=\"Password\" type=\"password\" \n        name=\"password\" [(ngModel)]=\"user.password\" required>\n      </mat-form-field>\n\n      <mat-form-field>\n        <input matInput placeholder=\"Re-enter password\" type=\"password\" \n        name=\"repassword\" [(ngModel)]=\"user.repassword\" required>\n      </mat-form-field>\n    </mat-card-content>\n    \n    <button mat-raised-button color=\"primary\" [disabled]=\"!signupForm.valid\" (click)=\"signup()\">Sign up</button>\n    <button mat-raised-button color=\"accent\" routerLink=\"/login\">Log in here</button>\n  </mat-card>\n</form>"
+module.exports = "<form #signupForm=\"ngForm\">\r\n  <mat-card class=\"signup-card\">\r\n    <mat-card-title id=\"signup\">Sign up</mat-card-title>\r\n    <mat-card-content>\r\n      <p class=\"alertError\" *ngIf=\"error !== ''\">{{ error }}</p>\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Username\" type=\"text\" \r\n        name=\"username\" [(ngModel)]=\"user.username\" required>\r\n      </mat-form-field>\r\n    \r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Email\" type=\"email\" \r\n        name=\"email\" [(ngModel)]=\"user.email\" required> \r\n      </mat-form-field>\r\n\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"First Name\" type=\"text\" \r\n        name=\"firstname\" [(ngModel)]=\"user.firstname\">\r\n      </mat-form-field>\r\n\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Last Name\" type=\"text\" \r\n        name=\"lastname\" [(ngModel)]=\"user.lastname\">\r\n      </mat-form-field>\r\n\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Password\" type=\"password\" \r\n        name=\"password\" [(ngModel)]=\"user.password\" required>\r\n      </mat-form-field>\r\n\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Re-enter password\" type=\"password\" \r\n        name=\"repassword\" [(ngModel)]=\"user.repassword\" required>\r\n      </mat-form-field>\r\n    </mat-card-content>\r\n    \r\n    <button mat-raised-button color=\"primary\" [disabled]=\"!signupForm.valid\" (click)=\"signup()\">Sign up</button>\r\n    <button mat-raised-button color=\"accent\" routerLink=\"/login\">Log in here</button>\r\n  </mat-card>\r\n</form>"
 
 /***/ }),
 
@@ -1452,6 +1513,9 @@ var SignupComponent = (function () {
     SignupComponent.prototype.ngOnInit = function () {
         this.user = new __WEBPACK_IMPORTED_MODULE_1__logic_User__["a" /* User */]();
     };
+    /**
+     * Sign up new user
+     */
     SignupComponent.prototype.signup = function () {
         var _this = this;
         this.auth.message.subscribe(function (value) { return _this.error = value; }, function (error) { return _this.error = error; });
@@ -1705,14 +1769,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var baseURL = "https://item-store.herokuapp.com";
-// const baseURL = "http://localhost:3000";
+// const baseURL = "https://item-store.herokuapp.com";
+var baseURL = "http://localhost:3000";
 var GroupService = (function () {
     function GroupService(http, auth) {
         this.http = http;
         this.auth = auth;
         this.groups = new __WEBPACK_IMPORTED_MODULE_6_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
     }
+    /**
+     * Get all groups
+     */
     GroupService.prototype.getAllGroups = function () {
         return this.http.get(baseURL + "/groups")
             .map(function (response) {
@@ -1720,12 +1787,21 @@ var GroupService = (function () {
             return response.json();
         });
     };
+    /**
+     * Update group for an item
+     * @param {string} itemId : Item's id
+     * @param {Number} newGroup : New group to be added to item's list of groups
+     */
     GroupService.prototype.updateItemGroup = function (itemId, newGroup) {
         return this.http.put(baseURL + "/items/" + itemId + "/updateGroup", newGroup, { headers: this.auth.headers })
             .map(function (response) {
             return response.json();
         });
     };
+    /**
+     * Adds new group
+     * @param {string} newGroup : New group to be added
+     */
     GroupService.prototype.addNewGroup = function (newGroup) {
         return this.http.post(baseURL + "/groups/newGroup", newGroup, { headers: this.auth.headers })
             .map(function (response) {
@@ -1774,8 +1850,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var baseURL = "https://item-store.herokuapp.com";
-// const baseURL = "http://localhost:3000";
+// const baseURL = "https://item-store.herokuapp.com";
+var baseURL = "http://localhost:3000";
 var ItemService = (function () {
     function ItemService(http, route, auth) {
         this.http = http;
@@ -1785,6 +1861,10 @@ var ItemService = (function () {
         this.items = new __WEBPACK_IMPORTED_MODULE_7_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([]);
         this.item = new __WEBPACK_IMPORTED_MODULE_7_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
     }
+    /**
+     * Creates new item
+     * @param model : Item to create
+     */
     ItemService.prototype.createItem = function (model) {
         var _this = this;
         return this.http.post(baseURL + "/items/create", model, { headers: this.auth.headers })
@@ -1794,11 +1874,13 @@ var ItemService = (function () {
                 return { message: resp.err, status: 500 };
             }
             else {
-                console.log(resp);
                 _this.item.next(resp);
             }
         });
     };
+    /**
+     * Get all items created by logged in user
+     */
     ItemService.prototype.getItemsCreatedByUser = function () {
         return this.http.get(baseURL + "/items/createdBy", { headers: this.auth.headers })
             .map(function (response) {
@@ -1806,6 +1888,10 @@ var ItemService = (function () {
             return resp;
         });
     };
+    /**
+     * Edit item details
+     * @param {Item} item : Item to edit
+     */
     ItemService.prototype.editItem = function (item) {
         var _this = this;
         return this.http.put(baseURL + "/items/edit/item/" + item._id, item, { headers: this.auth.headers })
@@ -1815,18 +1901,28 @@ var ItemService = (function () {
             _this.item.next(resp);
         });
     };
+    /**
+     * Get all items with pending approval from admin
+     */
     ItemService.prototype.getPendingItems = function () {
         return this.http.get(baseURL + "/items/pending", { headers: this.auth.headers })
             .map(function (response) {
             return response.json();
         });
     };
+    /**
+     * Get all incomplete items
+     */
     ItemService.prototype.getIncompleteItems = function () {
         return this.http.get(baseURL + "/items/incomplete", { headers: this.auth.headers })
             .map(function (response) {
             return response.json();
         });
     };
+    /**
+     * Approve item - only available to admin
+     * @param {string} itemId : Item's id
+     */
     ItemService.prototype.approveItem = function (itemId) {
         return this.http.put(baseURL + "/items/" + itemId + "/approve", {}, { headers: this.auth.headers })
             .map(function (response) {
@@ -1834,18 +1930,31 @@ var ItemService = (function () {
             return response.json();
         });
     };
+    /**
+     * Get all items that belong to a particular group
+     * @param {string} group : Group used to retrieve items
+     */
     ItemService.prototype.getItemsByGroup = function (group) {
         return this.http.get(baseURL + "/items/groupedBy/" + group, { headers: this.auth.headers })
             .map(function (response) {
             return response.json();
         });
     };
+    /**
+     * Rate an item
+     * @param {Number} rating : Rating
+     * @param {string} itemId : Item's id
+     */
     ItemService.prototype.rateItem = function (rating, itemId) {
         return this.http.post(baseURL + "/items/rate/" + itemId, { rating: rating }, { headers: this.auth.headers })
             .map(function (response) {
             return response.json().item;
         });
     };
+    /**
+     * Delete an item
+     * @param {string} itemId : Item's id
+     */
     ItemService.prototype.deleteItem = function (itemId) {
         return this.http.delete(baseURL + "/items/remove/" + itemId, { headers: this.auth.headers })
             .map(function (response) {
@@ -1890,13 +1999,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var baseURL = "https://item-store.herokuapp.com";
-// const baseURL = "http://localhost:3000";
+// const baseURL = "https://item-store.herokuapp.com";
+var baseURL = "http://localhost:3000";
 var MailService = (function () {
     function MailService(http, auth) {
         this.http = http;
         this.auth = auth;
     }
+    /**
+     * Send emails to users
+     * @param {string} message : Message to send
+     * @param {Array} to : Array of emails
+     */
     MailService.prototype.sendMail = function (message, to) {
         return this.http.post(baseURL + "/mail/send", { message: message, to: to }, { headers: this.auth.headers })
             .map(function (response) {
@@ -1939,8 +2053,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var baseURL = "https://item-store.herokuapp.com";
-// const baseURL = "http://localhost:3000";
+// const baseURL = "https://item-store.herokuapp.com";
+var baseURL = "http://localhost:3000";
 var UserService = (function () {
     function UserService(http, route) {
         this.http = http;
@@ -2046,6 +2160,10 @@ var UserService = (function () {
             _this.route.navigateByUrl('/login');
         });
     };
+    /**
+     * Edit user's profile
+     * @param model
+     */
     UserService.prototype.editProfile = function (model) {
         var _this = this;
         return this.http.put(baseURL + "/users/edit/" + this._id, model, { headers: this.headers }).toPromise()
@@ -2059,6 +2177,9 @@ var UserService = (function () {
             _this.message.next(err.json().err.message);
         });
     };
+    /**
+     * Get all groups for logged in user
+     */
     UserService.prototype.getMyGroups = function () {
         return this.http.get(baseURL + "/users/myGroups", { headers: this.headers })
             .map(function (response) {
@@ -2066,6 +2187,10 @@ var UserService = (function () {
             return response.json();
         });
     };
+    /**
+     * Update user's groups
+     * @param data
+     */
     UserService.prototype.updateMyGroups = function (data) {
         return this.http.put(baseURL + "/users/updateGroups", data, { headers: this.headers })
             .map(function (response) {
@@ -2073,12 +2198,19 @@ var UserService = (function () {
             return response.json().groups;
         });
     };
+    /**
+     * Get user data
+     * @param {string} uid : User id
+     */
     UserService.prototype.getUser = function (uid) {
         return this.http.get(baseURL + "/users/" + uid, { headers: this.headers })
             .map(function (response) {
             return response.json();
         });
     };
+    /**
+     * Get all user emails
+     */
     UserService.prototype.getAllUsers = function () {
         return this.http.get(baseURL + "/users/getAll", { headers: this.headers })
             .map(function (response) {
